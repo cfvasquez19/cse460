@@ -1,0 +1,12 @@
+$ vi ginfo
+#
+#
+#Script to print user information who currently login, current date&time
+#
+clear
+echo "Hello $USER"
+echo "Today is ";data
+echo "Number of users login: "; who | wc -1
+echo "Calandear"
+cal
+exit O

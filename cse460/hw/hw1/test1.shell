@@ -1,0 +1,12 @@
+$ vi test1
+#Cesar Vasquez
+#HW Q3b
+#
+if pidof ./test >/dev/null;then
+echo "test is running and will be killed"
+PID=`/bin/ps -fu $USER | grep ./test1 |
+grep -v "grep" | awk '{print$2}'`
+kill $PID
+else
+echo "test1 is not running"
+fi

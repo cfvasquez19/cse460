@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+
+if pidof -x "$1">/dev/null; then
+	echo "The Process is running and will be killed --> $1"
+	PID=`/bin/ps -fu $USER| grep "$1" | grep -v "grep" | awk '{print $2}'`
+	kill $PID
+else
+	echo "The process is not running -->$1"
+fi
